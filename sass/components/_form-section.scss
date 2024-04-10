@@ -1,0 +1,62 @@
+.form{
+    font-family: 'Space Grotesk';
+    margin-bottom: $spacing-xl;
+    @media(min-width:$media-query-m){
+        display: flex;
+        justify-content: center;
+    }
+    .form-section{
+        background-color: $LM-primary-background-color;
+        margin: $spacing-m $spacing-xsm;
+        // För att få rundade hörn
+        border-radius: $border-radius-l;
+        // Från 0 och upp till en viss px gäller
+        @media(max-width:$media-query-m){
+            padding: $spacing-m $spacing-sm;
+        }
+        // Från en viss px och uppåt gäller
+        @media(min-width:$media-query-m){
+            // Mer space på top&bottom och left&right
+            padding: $spacing-m $spacing-sm;
+        }
+        #name-form{
+            display: flex;
+            flex-wrap: wrap;
+            label{
+                font-size: 1.2rem;
+                // Skriver texten med stora bokstäver
+                text-transform: uppercase;
+            }
+        }
+        #name{
+            flex: 0 0 100%;
+            padding: $spacing-sm $spacing-xsm;
+            // Får rundade hörn
+            border-radius: $border-radius-s;
+            //Sätter en border
+            border: 2px solid $border-color;
+            margin: $spacing-m $spacing-xxsm;
+            // Targetar placeholder text
+            &::placeholder{
+                color: $placeholder-color;
+            }
+        }
+        #btn-submit{
+            background-color: $CTA-color;
+            color: $primary-text-color;
+            display: inline-block;
+            // Tar bort border
+            border: none;
+            padding: $spacing-sm;
+            border-radius: $border-radius-s;
+            //För att få knappen att lägga sig till höger
+            margin-left: auto;
+            &:disabled{
+                background-color: $disabled-color;
+                // Får ingen pekare
+                cursor: not-allowed;
+                color: $disabled-text-color;
+            }
+        }
+    }   
+}

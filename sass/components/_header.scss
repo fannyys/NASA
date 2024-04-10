@@ -1,0 +1,32 @@
+.main-header{
+    background-color: $LM-secondary-background-color;
+    color: $primary-text-color;
+    display: flex;
+    padding: .5rem;
+    justify-content: space-between;
+    .logo{
+        display: flex;
+        flex: 0 0 calc(100% / 2);
+        align-items: center;
+        h1{
+            max-width: 200px;
+            @media(max-width:$media-query-s){
+                display: none;
+            }
+        }
+        .img-logo{
+            flex: 0 0 90px;
+            @media(min-width:$media-query-s){
+                display: none;
+            }
+        }
+    }
+    .switchbtn{
+        display: flex;
+        align-items: center;
+        .switch-text{
+            margin-right: .3rem;
+            font-size: 1rem;
+        }
+    }
+}

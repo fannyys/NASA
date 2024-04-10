@@ -1,0 +1,76 @@
+.cookieAlert{
+    background-color: $cookie-background-color;
+    color: $cookie-text-color;
+    position: fixed;
+    // För att det ska hålla sig längst ner på sidan
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // Ska ta upp 100% av bredden
+    width: 100%;
+    padding: $spacing-xsm $spacing-m;
+    // Knappen hamnar bredvid texten
+    display: flex;
+    // Får mellanrum mellan text och knapp
+    justify-content: space-between;
+    // Centrerar innehållet vertikalt
+    align-items: center;
+    // column-gap: 1rem;
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(100%);
+    transition: all 50ms ease-out 100ms;
+    // Från 0 och upp till en viss px gäller detta
+    @media(max-width:$media-query-m){
+        // Får btn att wrapa runt texten, hamnar under
+        flex-wrap: wrap;
+        // Får innehållet centrerat
+        justify-content: center;
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+    }
+    // Ändra på p tag
+    .cookieText{
+        font-size: .9rem;
+        // Från 0 och upp till en viss px gäller detta
+        @media(max-width:$media-query-m){
+            // För att få mer space mellan text och btn
+            margin-bottom: $spacing-sm;
+        }
+        // Från en vis px och uppåt gäller detta
+        @media(min-width:$media-query-m){
+            // Växer inte efter en viss px
+            max-width: 1100px;
+            // Texten blir centrerad
+            margin: auto;
+            padding-right: $spacing-xsm;
+        }
+    }
+    // Ändra generell a tag som befinner sig i div
+    a{
+        color: $cookie-text-color;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    #cookieBtn{
+        flex: 0 1 auto;
+        background-color: $agree-color;
+        color: $cookie-text-color;
+        border: none;
+        padding: $spacing-xsm $spacing-m;
+        // Tar bort överflödig space, får texten på en rad
+        white-space: nowrap;
+        font-size: .8rem;
+        // När knappen är i focus läge gäller detta
+        &:focus{
+            outline: none;
+            border: 1px solid $DM-border-color;
+            box-shadow: 0px 0px 15px $LM-background;
+            font-weight: 700;
+        }
+    }
+    
+}

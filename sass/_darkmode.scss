@@ -1,0 +1,40 @@
+.dark{
+    background-color: $DM-background;
+    color: $invert-text-color;
+    .main-header{
+        background-color: $DM-primary-background-color;
+        color: $invert-text-color;
+        .switchbtn{
+            .switch{
+                .slider{
+                    background-color: $DM-secondary-background-color;
+                    // Ändrar knappfärgen vid darkmode
+                    &:before{
+                        background-color: $DM-primary-background-color;
+                    }
+                }
+            }
+        }
+    }
+    .form{
+        
+        .form-section{
+            background-color: $DM-primary-background-color;
+            #name{
+                border: 2px solid $DM-border-color;
+            }
+        }
+    }
+    .main-info{
+        background-color: $DM-primary-background-color;
+        .cards{
+            .text{
+                background-color: $DM-secondary-background-color;
+            }
+        }
+        
+    }
+    .main-footer{
+        background-color: $DM-background;
+    }
+}

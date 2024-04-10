@@ -1,0 +1,48 @@
+.main-info{
+    background-color: $LM-primary-background-color;
+    margin: 1rem;
+    padding: 3rem 1rem 0 1rem;
+    border-radius: $border-radius-l;
+    // Från 0 och upp till en viss px gäller
+    @media(max-width:$media-query-m){
+        display: flex;
+        flex-wrap: wrap;
+    }
+    // Från en viss px och uppåt gäller
+    @media(min-width:$media-query-s){
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: auto;
+    }
+    .cards{
+        flex: 0 0 90%;
+        margin: auto;
+        margin-bottom: $spacing-l;
+        // Behöver aktiveras på föräldern för att den ska fungera på barnet
+        position: relative;
+        @media(min-width:$media-query-m){
+            flex: 0 0 calc(100% / 2 - 1rem);
+        }
+        @media(min-width:$media-query-l){
+            flex: 0 0 calc(100% / 4 - 1rem);
+        }
+        
+        .text{
+            background-color: $LM-secondary-background-color;
+            height: 40px;
+            // Får inte rundade hörn på top left&right men får på botten left&right
+            border-radius: 0 0 $border-radius-s $border-radius-s;
+            // För att få texten centrerad
+            text-align: center;
+            // Får möjlighet att lägga sig på card
+            position: absolute;
+            // Lägger sig vid botten
+            bottom: 0;
+            // Lägger sig till vänster
+            left: 0;
+            // Sträcker ut sig mot höger
+            right: 0;
+        }
+    }
+}
