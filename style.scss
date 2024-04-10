@@ -1,0 +1,21 @@
+@import 'sass/variables';
+@import 'sass/typography';
+@import 'sass/components/header';
+@import 'sass/components/switchbtn';
+@import 'sass/components/imgs';
+@import 'sass/darkmode';
+@import 'sass/components/form-section';
+@import 'sass/components/cards-section';
+@import 'sass/components/footer';
+@import 'sass/components/cookieAlert';
+
+*,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Grotesk';
+    background-color: $LM-background;
+    color: $primary-text-color;
+}

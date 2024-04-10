@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA</title>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Länk till style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container för att hålla ihop allt -->
+    <div class="container">
+        <header class="main-header">
+            <div class="logo">
+                <h1>Nasa Mars Rovers</h1>
+            </div>
+            <!-- Div som håller i switchbtn -->
+            <div class="switchbtn">
+                <p class="switch-text">Discover Space</p>
+                <label class="switch">
+                    <input type="checkbox" id="switchBtn">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+        <!-- Div/Section som håller i input fältet, möjlighet att skriva sitt namn -->
+        <div class="form">
+            <section class="form-section">
+                <form action="" id="name-form">
+                    <label for="name">Choose your own space name</label>
+                    <input type="text" id="name" placeholder="Write your space name here">
+                    <button type="submit" id="btn-submit" disabled>Show my Space Name</button>
+                </form>
+                
+            </section>
+        </div>
+        
+        <!-- Div/Section som håller i de cards som visar bilder från Mars -->
+        <div class= "mars-cards" id="hidden">
+            <h2 id="greetingMessage">Welcome</h2>
+            <section class="main-info">
+                
+                <!-- En exempel article som är grunden till designen -->
+                <!-- Kan tas bort när det är skapat i JS -->
+                <!-- <article class="cards">
+                    <div class="mars-photo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>2024-03-21</h3>
+                        <p>2024-04-09</p>
+                    </div>
+                </article> -->
+            </section>
+        </div>
+        <footer class="main-footer">
+            <p>@Made By Nasa</p>
+        </footer>
+    </div>
+    
+    <!-- Extra, Cookie alert som förvarnar användaren -->
+    <div class="cookieAlert">
+        <p class="cookieText">
+            &#x1F36A; We use cookies to improve your experience on our website. By continuing to use our website, you agree to the use of cookies in accordance with our cookie settings. You can change your cookie settings at any time by clicking on 'Cookie settings' <a href="#" target="_blank">Learn more</a>
+        </p>
+        <button type="button" id="cookieBtn">I agree</button>
+    </div>
+
+    <!-- Länk till JS fil -->
+    <script src="script.js"></script>
+</body>
+</html>
